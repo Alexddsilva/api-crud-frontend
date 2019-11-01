@@ -1,14 +1,20 @@
 import React from 'react';
-import Header from "./components/Header";
-import FuncionarioBox from "./components/Funcionario"
+import './App.css';
+
+
+import Routes from './routes';
 
 function App() {
+  
+
   return (
     <div className="container">
-      <Header title="CRUD Funcionario"/>
-      <br />
-      <FuncionarioBox />
+      <div className="content">
+        <Routes />
+
+      </div>
     </div>
+    
   );
 }
 
