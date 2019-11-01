@@ -3,9 +3,5 @@ import './style.css';
 
 export default function Home(){
 
-  return (
-    <>
-      
-    </>
-  )
+  return <h1>CRUD FUNCIONÁRIOS</h1>
 }

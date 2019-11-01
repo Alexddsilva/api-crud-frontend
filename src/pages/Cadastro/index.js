@@ -25,7 +25,7 @@ export default function Cadastro(){
   return (
     <>  
       <p> 
-        Escreva os dados do <strong>funcionario</strong> que deseja adicionar
+        Escreva os dados do <strong>funcionário</strong> que deseja adicionar
       </p>
 
       <form onSubmit={handleSubmit}>
