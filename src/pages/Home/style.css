@@ -1,8 +1,47 @@
+div.home {
+  background: #fff;
+}
+
+
 h1 {
   text-align: center;
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+}
 
+.home button.btn_cadastrar {
+  border: 0;
+  border-radius: 5px;
+  width: 45%;
+  height: 40px;
+  font-weight: bold;
+  background: rgb(36, 91, 136);
+  color: #fff;
+  cursor: pointer;
+  margin: 2.5%;
+}
+
+.home button.btn_cadastrar:hover {
+  background: rgb(27, 48, 141);
+}
+.home button.btn_listar {
+  border: 0;
+  border-radius: 5px;
+  width: 45%;
+  height: 40px;
+  font-weight: bold;
+  background: rgb(36, 91, 136);
+  color: #fff;
+  cursor: pointer;
+  margin: 2.5%;
+}
+
+.home button.btn_listar:hover {
+  background: rgb(27, 48, 141);
+}
+
+.home p {
+  font-size: 16px;
 }
