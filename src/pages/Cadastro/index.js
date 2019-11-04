@@ -1,7 +1,8 @@
 import React from 'react';
 import api from '../../services/api';
+import './style.css';
 
-export default function Cadastro(){
+export default function Cadastro( { history }){
   let funcionario = {
     id: 0,
     nome:'',
@@ -12,7 +13,7 @@ export default function Cadastro(){
 
   async function handleSubmit(event){
     event.preventDefault();
-
+  
     const response = await api.post('/api/funcionarios', {
       "nome": funcionario.nome,
       "sobrenome": funcionario.sobrenome,
@@ -22,6 +23,7 @@ export default function Cadastro(){
 
      console.log(response);
   }
+
   return (
     <>  
       <p> 
@@ -60,6 +62,7 @@ export default function Cadastro(){
         <button className="btn">Adicionar</button>
         
       </form>
+        <button className="btn_home" onClick={()=> history.push('/')}>Home</button>
     </>  
   )
 }
