@@ -14,16 +14,11 @@ export default function Listagem(){
     loadFuncionarios();
   }, []);
 
-  /*const funcionarios = api.get('/api/funcionarios', [])
-  console.log(funcionarios);*/
-  
-
-
   return (
    <>
     <ul className="lista-funcionarios">
       {funcionarios.map(funcionario => (
-          <p key={funcionario.id}>{funcionario.nome}</p>
+          <li key={funcionario.id}>{funcionario.nome} {funcionario.sobrenome} {funcionario.email} {funcionario.nis}</li>
         ))
       }
     </ul>

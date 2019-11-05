@@ -24,7 +24,7 @@ export default function Cadastro( { history }){
      console.log(response);
   }
 
-  return (
+  return ( /* colocar alguma reação quando clica no botão "Adicionar" */
     <>  
       <p> 
         Escreva os dados do <strong>funcionário</strong> que deseja adicionar
