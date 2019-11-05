@@ -1,0 +1,15 @@
+th {
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+  background: #fff;
+}
+
+li {
+  border: 1px auto solid;  
+  background: #fff;
+}
+
+td {
+  border: 1px solid;
+}
