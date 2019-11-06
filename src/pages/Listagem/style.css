@@ -1,0 +1,58 @@
+div.content {
+  max-width: auto;  
+}
+th {
+  font-size: 16px;
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+  background: rgb(182, 171, 171);
+}
+
+li {
+  border: 1px auto solid;  
+  background: #fff;
+}
+
+td {
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid;
+}
+
+.btn_editar {
+  margin: 2px;
+  height: 25px;
+  background: rgb(51, 95, 161);
+  margin-top: 2px;
+  border: 0;
+  border-radius: 2px;
+  width: 60px;
+  font: bold;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn_editar:hover {
+  background: rgb(18, 64, 133);
+}
+
+.btn_excluir {
+  background: rgb(219, 41, 18);
+  margin: 2px;
+  height: 25px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 2px;
+  width: 60px;
+  font: bold;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn_excluir:hover {
+  background: rgb(156, 29, 12);
+}

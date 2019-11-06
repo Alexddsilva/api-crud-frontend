@@ -11,20 +11,18 @@ export default function Cadastro( { history }){
     nis:''
   }
 
-  async function handleSubmit(event){
-    event.preventDefault();
+  async function handleSubmit(){
   
-    const response = await api.post('/api/funcionarios', {
+    await api.post('/api/funcionarios', {
       "nome": funcionario.nome,
       "sobrenome": funcionario.sobrenome,
       "email": funcionario.email,
       "nis": funcionario.nis
-     })
+    })
 
-     console.log(response);
   }
 
-  return (
+  return ( /* colocar alguma reação quando clica no botão "Adicionar" */
     <>  
       <p> 
         Escreva os dados do <strong>funcionário</strong> que deseja adicionar
