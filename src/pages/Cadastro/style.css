@@ -1,4 +1,47 @@
+.content {
+  width: 100%;
+  background: #FFF;
+  margin-top: 30%;
+  border-radius: 4px;
+  padding: 30px;
+}
 
+.content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content form label {
+  font-size: 17px;
+  color: #444;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.content form input {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.content button.btn {
+  border: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(3, 161, 82);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content button.btn:hover {
+  background: rgb(3, 114, 58);
+}
 .btn_home {
   border: 0;
   margin-top: 2px;

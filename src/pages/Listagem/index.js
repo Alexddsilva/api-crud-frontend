@@ -8,15 +8,19 @@ export default function Listagem(){
   useEffect(() => {
     async function loadFuncionarios () {
       const response = await api.get('/api/funcionarios')
-      console.log(response);
 
       setFuncionarios(response.data);
     }
     loadFuncionarios();
-  }, []);
+  }, [funcionarios]);
+
+
+  async function deleteFuncionario(id){
+    await api.delete(`/api/funcionarios/${id}`)
+  }
 
   return (
-   <>
+   <div className="content_tab">
       <table>
         <thead>
           <tr>
@@ -34,15 +38,15 @@ export default function Listagem(){
                 <td>{funcionario.sobrenome}</td> 
                 <td>{funcionario.email}</td> 
                 <td>{funcionario.nis}</td>
-                <td>
+                <td id="options">
                   <button className="btn_editar">Editar</button>
-                  <button className="btn_excluir">Excluir</button>
+                  <button className="btn_excluir" onClick={event => deleteFuncionario(funcionario.id)}>Excluir</button>
                 </td>
               </tr>
             ))
           }
         </tbody>
       </table>
-   </>
+   </div>
   )
 }

@@ -30,7 +30,6 @@ body, input, button {
   flex-direction: column;
   align-items: center;
 }
-
 .content {
   width: 100%;
   background: #FFF;
