@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import './style.css';
 
-export default function Cadastro( { history }){
+export default function Cadastro(){
   let funcionario = {
     id: 0,
     nome:'',
@@ -57,10 +58,14 @@ export default function Cadastro( { history }){
           placeholder="digite o nis (apenas números)"
           onChange={event => funcionario.nis = event.target.value}
           />
+        
         <button className="btn">Adicionar</button>
         
       </form>
-        <button className="btn_home" onClick={()=> history.push('/')}>Home</button>
+      <Link to="/">
+        <button className="btn_home">Home</button>
+      </Link>
+        
     </div>  
   )
 }

@@ -2,9 +2,8 @@
   background: #fff;
 } 
 
-
-
 .content_tab th {
+  color:rgb(63, 60, 60);
   font-size: 16px;
   border: 1px solid;
   margin: 5px;
@@ -62,4 +61,40 @@
 
 .btn_excluir:hover {
   background: rgb(156, 29, 12);
+}
+
+.main button.btn {
+  border: 0;
+  border-radius: 2px;
+  width: 230px;
+  height: 35px;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(3, 161, 82);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.main button.btn:hover {
+  background: rgb(3, 114, 58);
+}
+
+.btn_tab_home {
+  border: 0;
+  margin-top: 2px;
+  border-radius: 2px;
+  width: 230px;
+  height: 35px;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(134, 131, 131);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn_tab_home:hover {
+  width: 230px;
+  height: 35px;
+  background: rgb(73, 72, 72);
 }
