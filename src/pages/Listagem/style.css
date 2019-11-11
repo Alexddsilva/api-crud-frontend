@@ -11,6 +11,9 @@
   background: rgb(182, 171, 171);
 }
 
+.content_tab tbody {
+  text-align: center;
+}
 .content_tab li {
   border: 1px auto solid;  
   background: #fff;
@@ -24,7 +27,9 @@
 }
 
 .content_tab td#options{
+  padding: 12px;
   display: flex;
+  border: 1px solid;
 }
 
 .btn_editar {

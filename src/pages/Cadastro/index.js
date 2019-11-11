@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import './style.css';
 
-export default function Cadastro(){
+export default function Cadastro({ history }){
   let funcionario = {
     id: 0,
     nome:'',
@@ -14,12 +14,23 @@ export default function Cadastro(){
 
   async function handleSubmit(event){
     event.preventDefault();
-    await api.post('/api/funcionarios', {
-      "nome": funcionario.nome,
-      "sobrenome": funcionario.sobrenome,
-      "email": funcionario.email,
-      "nis": funcionario.nis
-    })
+    if (
+      funcionario.nome === "" &&
+      funcionario.sobrenome === "" &&
+      funcionario.email === "" &&
+      funcionario.nis === ""
+      ) {
+        document.alert('Preencha este campo.');
+      } else {
+      await api.post('/api/funcionarios', {
+        "nome": funcionario.nome,
+        "sobrenome": funcionario.sobrenome,
+        "email": funcionario.email,
+        "nis": funcionario.nis
+      })}
+    setTimeout(() => {
+      window.location.href = "/api/listagem";
+    }, 100);
   }
 
   return ( /* colocar alguma reação quando clica no botão "Adicionar" */
@@ -35,21 +46,27 @@ export default function Cadastro(){
           type="text" 
           id="nome"
           placeholder="2 a 30 letras"
+          pattern=".{2,30}"
           onChange={event => funcionario.nome = event.target.value.trim()}
+          required
           />
         <label htmlFor="sobrenome">Sobrenome:</label>
         <input 
           type="text" 
           id="sobrenome" 
           placeholder="de 2 a 50 letras"
+          pattern=".{2,50}"
           onChange={ event => funcionario.sobrenome = event.target.value.trim()}
+          required
           />
           <label htmlFor="email">E-Mail *</label>
         <input 
           type="email" 
           id="email" 
           placeholder="E-mail do funcionário"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           onChange={event => funcionario.email = event.target.value.trim()}
+          required
           />
           <label htmlFor="nome">Nis:</label>
         <input 
@@ -57,10 +74,9 @@ export default function Cadastro(){
           id="nis" 
           placeholder="digite o nis (apenas números)"
           onChange={event => funcionario.nis = event.target.value}
+          required
           />
-        
-        <button className="btn">Adicionar</button>
-        
+      <button className="btn">Adicionar</button>
       </form>
       <Link to="/">
         <button className="btn_home">Home</button>
