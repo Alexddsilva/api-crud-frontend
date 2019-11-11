@@ -21,6 +21,25 @@ export default function Listagem(){
     await api.delete(`/api/funcionarios/${id}`)
   }
 
+  function selectFuncionaro(funcionario){
+    const dadosFuncionario = {
+      "id": funcionario.id,
+      "nome": funcionario.nome,
+      "sobrenome": funcionario.sobrenome,
+      "email": funcionario.email,
+      "nis": funcionario.nis
+    }
+    console.log(dadosFuncionario);
+    localStorage.setItem('funcionario_id', dadosFuncionario.id);
+    localStorage.setItem('funcionario_nome', dadosFuncionario.nome);
+    localStorage.setItem('funcionario_sobrenome', dadosFuncionario.sobrenome);
+    localStorage.setItem('funcionario_email', dadosFuncionario.email);
+    localStorage.setItem('funcionario_nis', dadosFuncionario.nis);
+    setTimeout(() => {
+      window.location.href = "/api/edicao";
+    }, 1000);
+  }
+
   return (
     <div className="main">
       <Link to="/api/funcionarios">
@@ -48,7 +67,7 @@ export default function Listagem(){
                     <td>{funcionario.email}</td> 
                     <td>{funcionario.nis}</td>
                     <td id="options">
-                      <button className="btn_editar" type="submit">Editar</button>
+                      <button className="btn_editar" type="submit" onClick={event => selectFuncionaro(funcionario)}>Editar</button>
                       <button className="btn_excluir" onClick={event => deleteFuncionario(funcionario.id)}>Excluir</button>
                     </td>
                   </tr>

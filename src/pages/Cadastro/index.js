@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import './style.css';
 
-export default function Cadastro({ history }){
+export default function Cadastro(){
   let funcionario = {
     id: 0,
     nome:'',
@@ -77,7 +77,7 @@ export default function Cadastro({ history }){
           onChange={event => funcionario.nis = event.target.value}
           required
           />
-      <button className="btn">Adicionar</button>
+      <button className="btn" onClick={() => handleSubmit}>Adicionar</button>
       </form>
       <Link to="/">
         <button className="btn_home">Home</button>
