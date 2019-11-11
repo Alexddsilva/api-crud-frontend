@@ -82,7 +82,7 @@ export default function Cadastro({ history }){
         
       </form>
 
-        <button className="btn_home">Home</button>
+        <button className="btn_home" onClick={history.push('/')}>Home</button>
         
     </div>  
   )
