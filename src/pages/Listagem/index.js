@@ -48,7 +48,7 @@ export default function Listagem(){
                     <td>{funcionario.email}</td> 
                     <td>{funcionario.nis}</td>
                     <td id="options">
-                      <button className="btn_editar">Editar</button>
+                      <button className="btn_editar" type="submit">Editar</button>
                       <button className="btn_excluir" onClick={event => deleteFuncionario(funcionario.id)}>Excluir</button>
                     </td>
                   </tr>

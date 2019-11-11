@@ -14,6 +14,7 @@ export default function Cadastro({ history }){
 
   async function handleSubmit(event){
     event.preventDefault();
+
     if (
       funcionario.nome === "" &&
       funcionario.sobrenome === "" &&
@@ -33,7 +34,7 @@ export default function Cadastro({ history }){
     }, 100);
   }
 
-  return ( /* colocar alguma reação quando clica no botão "Adicionar" */
+  return ( 
 
     <div className="content">  
       <p> 
