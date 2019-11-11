@@ -7,6 +7,7 @@ export default function Listagem(){
   const [funcionarios, setFuncionarios] = useState([]);
 
   useEffect(() => {
+
     async function loadFuncionarios () {
       const response = await api.get('/api/funcionarios')
 

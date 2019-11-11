@@ -35,21 +35,21 @@ export default function Cadastro(){
           type="text" 
           id="nome"
           placeholder="2 a 30 letras"
-          onChange={event => funcionario.nome = event.target.value}
+          onChange={event => funcionario.nome = event.target.value.trim()}
           />
         <label htmlFor="sobrenome">Sobrenome:</label>
         <input 
           type="text" 
           id="sobrenome" 
           placeholder="de 2 a 50 letras"
-          onChange={ event => funcionario.sobrenome = event.target.value}
+          onChange={ event => funcionario.sobrenome = event.target.value.trim()}
           />
           <label htmlFor="email">E-Mail *</label>
         <input 
           type="email" 
           id="email" 
           placeholder="E-mail do funcionário"
-          onChange={event => funcionario.email = event.target.value}
+          onChange={event => funcionario.email = event.target.value.trim()}
           />
           <label htmlFor="nome">Nis:</label>
         <input 
