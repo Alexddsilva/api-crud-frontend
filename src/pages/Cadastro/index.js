@@ -78,7 +78,7 @@ export default function Cadastro(){
           onChange={event => funcionario.nis = event.target.value}
           required
           />
-      <button className="btn" onClick={() => handleSubmit}>Adicionar</button>
+      <button className="btn" type="submit">Adicionar</button>
       </form>
       <Link to="/">
         <button className="btn_home">Home</button>

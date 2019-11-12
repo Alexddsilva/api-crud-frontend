@@ -12,19 +12,24 @@ export default function Edicao (){
     "email": localStorage.getItem('funcionario_email'),
     "nis": localStorage.getItem('funcionario_nis')
   }
-  console.log(funcionario);
 
   async function handleSubmit(event){
     event.preventDefault();
-
-    await api.put('/api/funcionarios', {
-      "id": funcionario.id,
-      "nome":funcionario.nome,
-      "sobrenome": funcionario.sobrenome,
-      "email": funcionario.email,
-      "nis": funcionario.nis
-      })
-    localStorage.clear();
+    if (
+      funcionario.nome === "" &&
+      funcionario.sobrenome === "" &&
+      funcionario.email === "" &&
+      funcionario.nis === ""
+      ) {
+        document.alert('Preencha este campo.');
+      } else {
+      await api.put('/api/funcionarios', {
+        "id": funcionario.id,
+        "nome": funcionario.nome,
+        "sobrenome": funcionario.sobrenome,
+        "email": funcionario.email,
+        "nis": funcionario.nis
+      })}
     setTimeout(() => {
       window.location.href = "/api/listagem";
     }, 500);
@@ -78,7 +83,7 @@ export default function Edicao (){
           onChange={event =>funcionario.nis = event.target.value}
           required
           />
-      <button className="btn_edicao" onClick={() => handleSubmit()}>Adicionar</button>
+      <button className="btn_edicao" type="submit">Adicionar</button>
       </form>
       <Link to="/">
         <button className="btn_home_edicao">Home</button>
