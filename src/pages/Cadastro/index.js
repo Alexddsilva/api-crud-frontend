@@ -65,7 +65,7 @@ export default function Cadastro(){
           type="email" 
           id="email" 
           placeholder="E-mail do funcionário"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           onChange={event => funcionario.email = event.target.value.trim()}
           required
           />
@@ -74,6 +74,7 @@ export default function Cadastro(){
           type="text" 
           id="nis" 
           placeholder="digite o nis (apenas números)"
+          pattern="[0-9]*"
           onChange={event => funcionario.nis = event.target.value}
           required
           />

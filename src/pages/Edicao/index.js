@@ -14,20 +14,21 @@ export default function Edicao (){
   }
   console.log(funcionario);
 
-  async function handleSubmit(){
+  async function handleSubmit(event){
+    event.preventDefault();
+
     await api.put('/api/funcionarios', {
       "id": funcionario.id,
       "nome":funcionario.nome,
       "sobrenome": funcionario.sobrenome,
       "email": funcionario.email,
       "nis": funcionario.nis
-    }) 
+      })
+    localStorage.clear();
     setTimeout(() => {
       window.location.href = "/api/listagem";
-    }, 100);
+    }, 500);
   }
-    
-  
 
   return (
 
@@ -72,6 +73,7 @@ export default function Edicao (){
           type="text" 
           id="nis_edicao" 
           placeholder="digite o nis (apenas números)"
+          pattern="[0-9]*"
           defaultValue={funcionario.nis}
           onChange={event =>funcionario.nis = event.target.value}
           required
