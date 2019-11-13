@@ -3,7 +3,7 @@ Projeto criado com Create React App. (https://github.com/facebook/create-react-a
 
 ## Utilização da Aplicação
 
-1- A aplicação consome os dados de uma API pŕópria, disponível em - `https://github.com/Alexddsilva/api-crud-backend`
+1- A aplicação consome os dados de uma API pŕópria, disponível em - https://github.com/Alexddsilva/api-crud-backend
 
 2- Instale o yarn - https://yarnpkg.com/en/docs/install
 
