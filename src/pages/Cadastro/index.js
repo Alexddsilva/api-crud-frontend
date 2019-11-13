@@ -66,6 +66,7 @@ export default function Cadastro(){
           type="text" 
           id="nis" 
           placeholder="digite o nis (apenas números)"
+          maxLength="11"
           pattern="[0-9]*"
           onChange={event => funcionario.nis = event.target.value}
           required

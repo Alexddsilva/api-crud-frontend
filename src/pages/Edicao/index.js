@@ -74,6 +74,7 @@ export default function Edicao (){
           id="nis_edicao" 
           placeholder="digite o nis (apenas números)"
           pattern="[0-9]*"
+          maxLength="11"
           defaultValue={funcionario.nis}
           onChange={event =>funcionario.nis = event.target.value}
           required
