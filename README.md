@@ -14,7 +14,7 @@ Para adicionar a biblioteca do axios.
 ###  `yarn start`
 
 Este comando inicia a aplicação em modo de desenvolvimento.
-A pagina será aberta no navegador no endereço [http://localhost:3000] ou na próxima porta disponível caso a 3000 esteja em uso.
+A pagina será aberta no navegador no endereço [http://localhost:<strong>3000</strong>] ou na próxima porta disponível caso a <strong>3000</strong> esteja em uso.
 
 ### Sugestões e dúvidas:
 
