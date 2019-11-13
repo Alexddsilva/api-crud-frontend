@@ -39,6 +39,7 @@ export default function Cadastro(){
           type="text" 
           id="nome"
           placeholder="2 a 30 letras"
+          maxLength="30"
           pattern=".{2,30}"
           onChange={event => funcionario.nome = event.target.value.trim()}
           required
@@ -48,6 +49,7 @@ export default function Cadastro(){
           type="text" 
           id="sobrenome" 
           placeholder="de 2 a 50 letras"
+          maxLength="50"
           pattern=".{2,50}"
           onChange={ event => funcionario.sobrenome = event.target.value.trim()}
           required

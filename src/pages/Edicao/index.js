@@ -43,6 +43,7 @@ export default function Edicao (){
           type="text" 
           id="nome_edicao"
           placeholder="2 a 30 letras"
+          maxLength="30"
           pattern=".{2,30}"
           defaultValue={funcionario.nome}
           onChange={event => funcionario.nome = event.target.value}
@@ -51,8 +52,9 @@ export default function Edicao (){
         <label htmlFor="sobrenome">Sobrenome:</label>
         <input 
           type="text" 
-          id="sobrenome_edicao" 
+          id="sobrenome_edicao"
           placeholder="de 2 a 50 letras"
+          maxLength="50"
           pattern=".{2,50}"
           defaultValue={funcionario.sobrenome}
           onChange={event => funcionario.sobrenome = event.target.value}
