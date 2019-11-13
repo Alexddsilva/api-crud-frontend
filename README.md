@@ -15,7 +15,7 @@ Este comando instala os pacotes do node.
 ###  `yarn start`
 
 Este comando inicia a aplicação em modo de desenvolvimento.
-A pagina será aberta no navegador no endereço [http://localhost:<strong>3000</strong>] ou na próxima porta disponível caso a <strong>3000</strong> esteja em uso (caso seja utilizada uma porta diferente da <strong>3000</strong>, é necessário realizar a alteração no backend da aplicação).
+A pagina será aberta no navegador no endereço [http://localhost:<strong>3000</strong>] ou na próxima porta disponível caso a <strong>3000</strong> esteja em uso (se a porta utilizada for diferente da <strong>3000</strong>, é necessário realizar a alteração da porta no backend da aplicação: `src/main/java/com/ciss/crud/apirest/resources/FuncionarioController.java`).
 
 ### Sugestões e dúvidas:
 
