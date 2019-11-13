@@ -15,20 +15,12 @@ export default function Cadastro(){
   async function handleSubmit(event){
     event.preventDefault();
 
-    if (
-      funcionario.nome === "" &&
-      funcionario.sobrenome === "" &&
-      funcionario.email === "" &&
-      funcionario.nis === ""
-      ) {
-        document.alert('Preencha este campo.');
-      } else {
-      await api.post('/api/funcionarios', {
-        "nome": funcionario.nome,
-        "sobrenome": funcionario.sobrenome,
-        "email": funcionario.email,
-        "nis": funcionario.nis
-      })}
+    await api.post('/api/funcionarios', {
+      "nome": funcionario.nome,
+      "sobrenome": funcionario.sobrenome,
+      "email": funcionario.email,
+      "nis": funcionario.nis
+    })
     setTimeout(() => {
       window.location.href = "/api/listagem";
     }, 100);

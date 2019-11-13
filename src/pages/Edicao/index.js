@@ -15,25 +15,20 @@ export default function Edicao (){
 
   async function handleSubmit(event){
     event.preventDefault();
-    if (
-      funcionario.nome === "" &&
-      funcionario.sobrenome === "" &&
-      funcionario.email === "" &&
-      funcionario.nis === ""
-      ) {
-        document.alert('Preencha este campo.');
-      } else {
+  
       await api.put('/api/funcionarios', {
         "id": funcionario.id,
         "nome": funcionario.nome,
         "sobrenome": funcionario.sobrenome,
         "email": funcionario.email,
         "nis": funcionario.nis
-      })}
-    setTimeout(() => {
-      window.location.href = "/api/listagem";
-    }, 500);
-  }
+      })
+      setTimeout(() => {
+        window.location.href = "/api/listagem";
+      }, 500);
+    }
+    
+  
 
   return (
 
