@@ -8,7 +8,7 @@ Projeto criado com Create React App. (https://github.com/facebook/create-react-a
 2- Instale o yarn - https://yarnpkg.com/en/docs/install
 
 3- <strong> Iniciando a aplicação </strong> - Abra um terminal de comandos no diretório principal do projeto e execute os comandos:
-## `npm install`
+### `npm install`
 
 Este comando instala os pacotes do node.
 
